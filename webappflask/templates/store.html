@@ -5,15 +5,14 @@ Store
 {% endblock %}
 {% block content %}
 
-<div class="row" style="margin-top:20px; margin-left:20px">
-   <div class="col-8">
-       <h2>Available items on the Market</h2>
-       <p>Click on one of the items to start buying</p>
+<div id="store" class="store">
+    <div class="container-fluid">
+       <h2>Available items</h2>
        <br>
-      <table class="table table-hover table-dark">
+      <table class="table table-hover thead-secondary table-light table-striped">
          <thead>
             <tr>
-               <!-- Your Columns HERE -->
+               <!-- Columns HERE -->
                <th scope="col">ID</th>
                <th scope="col">Name</th>
                <th scope="col">Barcode</th>
@@ -22,7 +21,7 @@ Store
             </tr>
          </thead>
          <tbody>
-            <!-- Your rows inside the table HERE: -->
+            <!-- Rows inside the table HERE: -->
             {% for item in items %}
             {% include 'includes/items_modals.html' %}
             <tr>
@@ -39,5 +38,6 @@ Store
          </tbody>
       </table>
    </div>
+</div>
 
 {% endblock content %}

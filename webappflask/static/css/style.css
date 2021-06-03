@@ -1102,10 +1102,10 @@
      content: "";
      background: url(../images/crros.png);
      height: 244px;
-    width: 187px;
-    bottom: 0;
-    left: 0;
-    background-repeat: no-repeat;
+     width: 187px;
+     bottom: 0;
+     left: 0;
+     background-repeat: no-repeat;
 }
  .about .about-box h2 {
      font-weight: bold;

@@ -1,10 +1,36 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
+from flask_mail import Mail
+from webappflask.config import Config
 
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'f013486273aef03586d83a311a3d37ad'  # import secrets / secrets.token_hex(16)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-db = SQLAlchemy(app)
+db = SQLAlchemy()
+bcrypt = Bcrypt()
+login_manager = LoginManager()
+login_manager.login_view = 'users.login'
+login_manager.login_message_category = 'info'
+mail = Mail()
 
-from webappflask import routes
+
+def create_app(config_class=Config):
+    app = Flask(__name__)
+    app.config.from_object(Config)
+    db.init_app(app)
+    bcrypt.init_app(app)
+    login_manager.init_app(app)
+    mail.init_app(app)
+
+    from webappflask.users.routes import users
+    from webappflask.posts.routes import posts
+    from webappflask.main.routes import main
+    from webappflask.store.routes import store
+    from webappflask.errors.handlers import errors
+    app.register_blueprint(users)
+    app.register_blueprint(posts)
+    app.register_blueprint(main)
+    app.register_blueprint(store)
+    app.register_blueprint(errors)
+
+    return app
