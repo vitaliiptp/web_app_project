@@ -11,7 +11,7 @@ class Config:
     MAIL_PASSWORD = config('EMAIL_PASS')
 
 
-class Test_Config:
+class Config_Test:
     SECRET_KEY = config('SECRET_KEY_TEST')
     SQLALCHEMY_DATABASE_URI = config('SQLALCHEMY_DATABASE_URI_TEST')
     MAIL_SERVER = 'smtp.googlemail.com'

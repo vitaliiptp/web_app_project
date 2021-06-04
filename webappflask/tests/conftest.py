@@ -1,7 +1,7 @@
 import pytest
 from webappflask import create_app, db
 from webappflask.models import User
-from webappflask.config import Test_Config
+from webappflask.config import Config_Test
 
 
 @pytest.fixture(scope='module')
@@ -12,7 +12,7 @@ def new_user():
 
 @pytest.fixture(scope='module')
 def test_client():
-    flask_app = create_app(Test_Config)
+    flask_app = create_app(config_class=Config_Test)
 
     # Create a test client using the Flask application configured for testing
     with flask_app.test_client() as testing_client:
