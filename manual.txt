@@ -34,6 +34,8 @@ db.create.all()
 
 
 pipenv install -r requirements.txt
+pip freeze --local > requirements.txt
+
 
 touch .env (in project directory)
 open -e .env (add it to .gitignore)
