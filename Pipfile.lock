@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7c89d0c96ea8b40fda7cde143a971de15ee46179026d1ec826fa64012be21ffb"
+            "sha256": "2f78fab730ae3ae3598113576ff11ebe560398e3c4b4b899e943a61edd8bc2da"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -547,6 +547,14 @@
             "index": "pypi",
             "version": "==6.2.4"
         },
+        "pytest-cov": {
+            "hashes": [
+                "sha256:261bb9e47e65bd099c89c3edf92972865210c36813f80ede5277dceb77a4a62a",
+                "sha256:261ceeb8c227b726249b376b8526b600f38667ee314f910353fa318caa01f4d7"
+            ],
+            "index": "pypi",
+            "version": "==2.12.1"
+        },
         "pytest-flask": {
             "hashes": [
                 "sha256:46fde652f77777bf02dc91205aec4ce20cdf2acbbbd66a918ab91f5c14693d3d",
@@ -636,7 +644,7 @@
                 "sha256:753a0374df26658f99d826cfe40394a686d05985786d946fbe4165b5148f5a7c",
                 "sha256:a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4.0'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "version": "==1.26.5"
         },
         "werkzeug": {

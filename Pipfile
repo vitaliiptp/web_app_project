@@ -46,6 +46,7 @@ pyparsing = "==2.4.7"
 six = "==1.16.0"
 SQLAlchemy = "==1.4.17"
 coveralls = "*"
+pytest-cov = "*"
 
 [dev-packages]
 
